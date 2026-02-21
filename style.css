@@ -173,52 +173,53 @@ button:active {
 
 }
 
-.container{
+.container {
     width: 420px;
-    background:#fff;
+    background: #fff;
     padding: 20px 30px;
-    border-radius:5px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
-.container header{
-    font-size:24px;
+.container header {
+    font-size: 24px;
     font-weight: 600;
-    line-heigth:33px;
-}
-.container form{
-    margin: 20px 5px 10px 5px; 
+    line-height: 33px;
 }
 
-form .field{
+.container form {
+    margin: 20px 5px 10px 5px;
+}
+
+form .field {
     height: 45px;
-    width:100%;
-    display:flex;
+    width: 100%;
+    display: flex;
     position: relative;
 }
 
-form .field input{
-    height:100%;
-    width:100%;
+form .field input {
+    height: 100%;
+    width: 100%;
     border: 1px solid lightgrey;
-    padding-left:15px;
+    padding-left: 15px;
     outline: none;
     border-radius: 5px;
-    font-size:17px;
+    font-size: 17px;
     transition: all 0.3s;
 }
 
-form .field input:focus{
-    border-color:#27a360;
+form .field input:focus {
+    border-color: #27a360;
     box-shadow: inset 0 0 3px #2fd072;
 }
 
-form .field .showBtn{
-    postion:absolute;
-    right:10px;
-    top:50%;
+form .field .showBtn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
     transform: translateY(-50%);
-    cursor:pointer;
+    cursor: pointer;
     font-size: 15px;
     font-weight: 600px;
 }
