@@ -223,16 +223,17 @@ form .field .showBtn {
     font-size: 15px;
     font-weight: 600px;
 }
-form .indicator{
-    height:10px;
-    width:1;
-    align-items:center;
+
+form .indicator {
+    height: 10px;
+    width: 1;
+    align-items: center;
     justify-content: space-between;
     margin: 10px 0;
-    
+
 }
 
-form .indicator span{
+form .indicator span {
     width: 100%;
     height: 100%;
     background: lightgrey;
@@ -240,33 +241,33 @@ form .indicator span{
     position: relative;
 }
 
-form .indicator span.medium{
+form .indicator span.medium {
     margin: 0 3px;
 }
 
 
-form .indicator span:before{
+form .indicator span:before {
     content: '';
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: red;
-    border-radius:5px;
+    border-radius: 5px;
 }
 
-form .indicator span.weak:before{
+form .indicator span.weak:before {
     background-color: #ff4757;
 }
 
-form .indicator span.medium:before{
+form .indicator span.medium:before {
     background-color: orange;
 }
 
-form .indicator span.strong:before{
+form .indicator span.strong:before {
     background-color: #23ad5c;
-}       
+}
 
 /* Article page (e.g. MFA) */
 .article-page {
@@ -353,9 +354,17 @@ form .indicator span.strong:before{
     color: var(--text);
 }
 
-.section-purple h2 { color: #a78bfa; }
-.section-teal h2 { color: #5eead4; }
-.section-amber h2 { color: #fcd34d; }
+.section-purple h2 {
+    color: #a78bfa;
+}
+
+.section-teal h2 {
+    color: #5eead4;
+}
+
+.section-amber h2 {
+    color: #fcd34d;
+}
 
 /* Callout section */
 .section-callout {
@@ -383,12 +392,13 @@ form .text.weak {
 }
 
 form .text.medium {
-    color: orange;
+    color: rgb(255, 120, 248);
 }
 
 form .text.strong {
     color: #23ad5c;
 }
+
 /* Footer */
 footer {
     border-top: 1px solid var(--border);
