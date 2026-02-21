@@ -268,6 +268,109 @@ form .indicator span.strong:before{
     background-color: #23ad5c;
 }       
 
+/* Article page (e.g. MFA) */
+.article-page {
+    max-width: 780px;
+}
+
+.article-page .lead {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Graphic placeholders */
+.graphic {
+    margin: 1.5rem 0;
+}
+
+.graphic-placeholder {
+    background: var(--surface);
+    border: 2px dashed var(--border);
+    border-radius: var(--radius);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    padding: 2rem;
+    text-align: center;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphic-hero .graphic-placeholder {
+    min-height: 200px;
+    font-size: 1rem;
+}
+
+.graphic-inline .graphic-placeholder {
+    min-height: 100px;
+    margin-top: 1rem;
+}
+
+.graphic-wide .graphic-placeholder {
+    min-height: 160px;
+    margin-top: 1rem;
+}
+
+.graphic img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+}
+
+/* Accent sections – colored left border */
+.section-accent {
+    border-left: 4px solid var(--accent);
+}
+
+.section-purple {
+    border-left-color: var(--accent);
+    background: linear-gradient(90deg, rgba(124, 108, 249, 0.06) 0%, transparent 40%);
+}
+
+.section-teal {
+    border-left-color: #2dd4bf;
+    background: linear-gradient(90deg, rgba(45, 212, 191, 0.06) 0%, transparent 40%);
+}
+
+.section-teal:hover {
+    border-color: rgba(45, 212, 191, 0.3);
+}
+
+.section-amber {
+    border-left-color: #fbbf24;
+    background: linear-gradient(90deg, rgba(251, 191, 36, 0.06) 0%, transparent 40%);
+}
+
+.section-amber:hover {
+    border-color: rgba(251, 191, 36, 0.3);
+}
+
+.section-accent h2 {
+    color: var(--text);
+}
+
+.section-purple h2 { color: #a78bfa; }
+.section-teal h2 { color: #5eead4; }
+.section-amber h2 { color: #fcd34d; }
+
+/* Callout section */
+.section-callout {
+    background: linear-gradient(135deg, rgba(124, 108, 249, 0.12) 0%, rgba(45, 212, 191, 0.08) 100%);
+    border: 1px solid rgba(124, 108, 249, 0.25);
+}
+
+.section-callout h2 {
+    color: #c4b5fd;
+}
+
+.section-callout p {
+    color: var(--text);
+}
+
 /* Footer */
 footer {
     border-top: 1px solid var(--border);
