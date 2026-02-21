@@ -371,6 +371,24 @@ form .indicator span.strong:before{
     color: var(--text);
 }
 
+/* Password strength text (form) */
+form .text {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: -10px;
+}
+
+form .text.weak {
+    color: #ff4757;
+}
+
+form .text.medium {
+    color: orange;
+}
+
+form .text.strong {
+    color: #23ad5c;
+}
 /* Footer */
 footer {
     border-top: 1px solid var(--border);
