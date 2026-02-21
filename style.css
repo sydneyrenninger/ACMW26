@@ -173,6 +173,14 @@ button:active {
 
 }
 
+.container{
+    width: 420px;
+    background:#fff;
+    padding: 20px 30px;
+    border-radius:5px;
+    box-shadow: 0 0 15px rgba();
+}
+
 /* Footer */
 footer {
     border-top: 1px solid var(--border);
