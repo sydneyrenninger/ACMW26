@@ -128,6 +128,24 @@ section p {
     font-size: 0.95rem;
 }
 
+/* Password Protector */
+.input-box{
+    width: 400px;
+    max-width:90%;
+    postion:relative;
+}
+
+.input-box input{
+    width:100%;
+    height = 60px;
+    padding = 0 20 px;
+    border = 1px solid #ccc;
+    outline: none;
+    color: #fff;
+    background: transparent;
+    
+}
+
 /* Footer */
 footer {
     border-top: 1px solid var(--border);
