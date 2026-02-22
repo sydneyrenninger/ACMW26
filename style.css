@@ -96,6 +96,22 @@ main>h1 {
     background-clip: text;
 }
 
+/* Homepage hero title – more noticeable */
+main>h1.hero-title {
+    font-size: clamp(2.25rem, 6vw, 3.25rem);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(90deg, var(--accent), #2dd4bf) 1;
+    background: linear-gradient(135deg, #a78bfa 0%, var(--accent) 40%, #2dd4bf 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(124, 108, 249, 0.35));
+}
+
 main>p {
     font-size: 1.15rem;
     color: var(--text-muted);
