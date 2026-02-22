@@ -259,7 +259,7 @@ input::placeholder {
 
 /* Article page (e.g. MFA) */
 .article-page {
-    max-width: 780px;
+    max-width: 1100px;
 }
 
 .article-page .lead,
@@ -366,11 +366,7 @@ input::placeholder {
     color: var(--text);
 }
 
-/* MFA kid-friendly page – wider, more visual space, easier to read */
-.mfa-kid {
-    max-width: 1100px;
-}
-
+/* MFA kid-friendly page – more visual space, easier to read */
 .mfa-kid .lead {
     font-size: 1.25rem;
     line-height: 1.5;
