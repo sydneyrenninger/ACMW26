@@ -148,7 +148,52 @@ section p {
     color: var(--text-muted);
     font-size: 0.95rem;
 }
+/* Webiste */
+.app{
+    background:#fff;
+    width:90%;
+    max-width:600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding:30px;
+}
 
+.app h1{
+    font-size: 25px;
+    color: #001e4d;
+    font-weight: 600;
+    border-bottom: 1px solid #333;
+}
+
+.quiz{
+    padding: 20px 0;
+}
+
+.quiz h2{
+    font-size: 18px;
+    color:#001e4d;
+    font-weight: 600;
+}
+
+.btn{
+    background: #fff;
+    color:#222;
+    font-weight:500;
+    width:100%;
+    border: 1px solid #222;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover{
+    background: #222;
+    color: #fff;
+    
+}
 /* Buttons */
 button {
     font-family: var(--font-sans);
@@ -622,6 +667,7 @@ form .text.strong {
     font-style: italic;
     margin: 0;
 }
+
 
 /* Malware comparison table */
 .comparison-intro {
