@@ -40,8 +40,8 @@
         </section>
 
         <section class="phishing-activity section-accent section-amber mfa-section">
-            <h2>🎯 Spot the Red Flags</h2>
-            <p>Click each <span class="phish-hint-dotted">dotted part</span> of the emails below to see why they’re tricky.</p>
+            <h2>Spot the Red Flags</h2>
+            <p>Click parts of each email below to find the red flags and see why they’re tricky.</p>
 
             <div class="phishing-example">
                 <p class="email-example-label">Example 1: Account “verify” email</p>
@@ -81,37 +81,37 @@
                     <p class="phish-counter" id="phishCounter1">You found 0 of 4 red flags.</p>
                     <p class="hint-list-label">What you found:</p>
                     <ul id="hintListItems1"></ul>
-                    <p id="hintListEmpty1" class="hint-list-empty">Click a dotted part of this email to see why it’s tricky.</p>
+                    <p id="hintListEmpty1" class="hint-list-empty">Click parts of this email to find the red flags.</p>
                 </div>
             </div>
 
             <div class="phishing-example">
-                <p class="email-example-label">Example 2: Parcel delivery email</p>
+                <p class="email-example-label">Example 2: “You won a prize!” email</p>
                 <div class="email-mockup">
                     <div class="email-header">
                         <div class="email-meta">
                             <strong>From:</strong>
-                            <span class="phish-spot" data-activity="2" data-issue="Fake FedEx sender"
-                                data-explanation="Real FedEx uses addresses like @fedex.com. This one is fake!">FedEx Delivery &lt;notifications@fedex-delivery.net&gt;</span>
+                            <span class="phish-spot" data-activity="2" data-issue="Fake rewards sender"
+                                data-explanation="Real stores use their real domain (e.g. @walmart.com). This address is made up to look official.">Walmart Rewards &lt;claim@walmart-rewards.com&gt;</span>
                         </div>
                         <div class="email-meta">
                             <strong>Subject:</strong>
-                            <span class="phish-spot" data-activity="2" data-issue="Rushy delivery subject"
-                                data-explanation="Scammers make it sound urgent so you click without thinking. Real delivery companies don’t usually say “confirm today or we return it.”">Your parcel is waiting – confirm delivery today</span>
+                            <span class="phish-spot" data-activity="2" data-issue="Too-good-to-be-true subject"
+                                data-explanation="If you didn’t enter a contest, you didn’t win. Scammers promise free stuff to get you to click and give your info.">Congratulations! You’ve won a $100 Gift Card – claim in 48 hours</span>
                         </div>
                     </div>
                     <div class="email-body">
                         <p>
-                            <span class="phish-spot" data-activity="2" data-issue="“Dear Customer”"
-                                data-explanation="They don’t use your name because it’s a fake message sent to many people.">Dear Customer,</span>
+                            <span class="phish-spot" data-activity="2" data-issue="Generic greeting"
+                                data-explanation="Real companies use your name. “Valued customer” is a sign of a mass scam.">Dear Valued Customer,</span>
                         </p>
                         <p>
-                            We tried to deliver your package but could not reach you. Confirm your address or schedule redelivery within 24 hours or the parcel will be returned.
+                            You were selected for our monthly giveaway! Click below to claim your $100 gift card. Offer expires in 48 hours – don’t miss out!
                         </p>
                         <p>
-                            <span class="phish-spot" data-activity="2" data-issue="Track/confirm button"
-                                data-explanation="Don’t click “track” or “confirm” links in emails. Go to the real FedEx website yourself and enter your tracking number there."><button
-                                    type="button" class="email-fake-btn">Track your parcel</button></span>
+                            <span class="phish-spot" data-activity="2" data-issue="Claim/click button"
+                                data-explanation="Never click “claim” or “get my prize” in an email. Real giveaways don’t work that way. If you didn’t sign up, it’s a scam."><button
+                                    type="button" class="email-fake-btn">Claim my gift card</button></span>
                         </p>
                     </div>
                 </div>
@@ -119,45 +119,7 @@
                     <p class="phish-counter" id="phishCounter2">You found 0 of 4 red flags.</p>
                     <p class="hint-list-label">What you found:</p>
                     <ul id="hintListItems2"></ul>
-                    <p id="hintListEmpty2" class="hint-list-empty">Click a dotted part of this email to see why it’s tricky.</p>
-                </div>
-            </div>
-
-            <div class="phishing-example">
-                <p class="email-example-label">Example 3: “You won a prize!” email</p>
-                <div class="email-mockup">
-                    <div class="email-header">
-                        <div class="email-meta">
-                            <strong>From:</strong>
-                            <span class="phish-spot" data-activity="3" data-issue="Fake rewards sender"
-                                data-explanation="Real stores use their real domain (e.g. @walmart.com). This address is made up to look official.">Walmart Rewards &lt;claim@walmart-rewards.com&gt;</span>
-                        </div>
-                        <div class="email-meta">
-                            <strong>Subject:</strong>
-                            <span class="phish-spot" data-activity="3" data-issue="Too-good-to-be-true subject"
-                                data-explanation="If you didn’t enter a contest, you didn’t win. Scammers promise free stuff to get you to click and give your info.">Congratulations! You’ve won a $100 Gift Card – claim in 48 hours</span>
-                        </div>
-                    </div>
-                    <div class="email-body">
-                        <p>
-                            <span class="phish-spot" data-activity="3" data-issue="Generic greeting"
-                                data-explanation="Real companies use your name. “Valued customer” is a sign of a mass scam.">Dear Valued Customer,</span>
-                        </p>
-                        <p>
-                            You were selected for our monthly giveaway! Click below to claim your $100 gift card. Offer expires in 48 hours – don’t miss out!
-                        </p>
-                        <p>
-                            <span class="phish-spot" data-activity="3" data-issue="Claim/click button"
-                                data-explanation="Never click “claim” or “get my prize” in an email. Real giveaways don’t work that way. If you didn’t sign up, it’s a scam."><button
-                                    type="button" class="email-fake-btn">Claim my gift card</button></span>
-                        </p>
-                    </div>
-                </div>
-                <div class="hint-list" aria-live="polite">
-                    <p class="phish-counter" id="phishCounter3">You found 0 of 4 red flags.</p>
-                    <p class="hint-list-label">What you found:</p>
-                    <ul id="hintListItems3"></ul>
-                    <p id="hintListEmpty3" class="hint-list-empty">Click a dotted part of this email to see why it’s tricky.</p>
+                    <p id="hintListEmpty2" class="hint-list-empty">Click parts of this email to find the red flags.</p>
                 </div>
             </div>
         </section>

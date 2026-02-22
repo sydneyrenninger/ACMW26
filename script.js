@@ -64,7 +64,7 @@ if (password && strengthBar && strengthText && toggleBtn) {
 
 /* Phishing activity – only on phishing.html, separate counter per example */
 (function () {
-  var activities = ["1", "2", "3"];
+  var activities = ["1", "2"];
 
   function initActivity(activityId) {
     var counterEl = document.getElementById("phishCounter" + activityId);
