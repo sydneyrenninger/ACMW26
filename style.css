@@ -611,6 +611,204 @@ form .text.strong {
     margin: 0;
 }
 
+/* Malware comparison table */
+.comparison-intro {
+    margin-bottom: 1.25rem;
+}
+
+.comparison-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+.comparison-table thead th {
+    background: rgba(45, 212, 191, 0.12);
+    color: #5eead4;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(45, 212, 191, 0.35);
+}
+
+.comparison-table tbody th {
+    background: var(--surface);
+    color: var(--text-muted);
+    font-weight: 600;
+    width: 10rem;
+}
+
+.comparison-table tbody td {
+    background: var(--surface);
+    color: var(--text);
+}
+
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .comparison-table {
+        font-size: 0.875rem;
+    }
+    .comparison-table th,
+    .comparison-table td {
+        padding: 0.6rem 0.75rem;
+    }
+    .comparison-table tbody th {
+        width: 7rem;
+    }
+}
+
+/* Malware page – fake “misplaced” ad (educational) */
+.malware-page .fake-ad-wrap {
+    position: fixed;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    width: 160px;
+}
+
+.malware-page .fake-ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    border: 2px solid #f59e0b;
+    border-radius: 8px;
+    background: linear-gradient(180deg, #fef3c7 0%, #fde68a 50%, #fcd34d 100%);
+    color: #92400e;
+    font-family: var(--font-sans);
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    text-align: center;
+}
+
+.malware-page .fake-ad:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 24px rgba(245, 158, 11, 0.5);
+}
+
+.malware-page .fake-ad-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #b45309;
+    margin-bottom: 0.35rem;
+}
+
+.malware-page .fake-ad-headline {
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.malware-page .fake-ad-sub {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.malware-page .fake-ad-cta {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #b45309;
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .malware-page .fake-ad-wrap {
+        right: 0.75rem;
+        width: 140px;
+    }
+    .malware-page .fake-ad-headline {
+        font-size: 0.9rem;
+    }
+}
+
+/* Fake ad warning modal */
+.fake-ad-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.fake-ad-modal[hidden] {
+    display: none;
+}
+
+.fake-ad-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.fake-ad-modal-box {
+    position: relative;
+    max-width: 420px;
+    width: 100%;
+    padding: 1.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.fake-ad-modal-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #fbbf24;
+}
+
+.fake-ad-modal-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+}
+
+.fake-ad-modal-close {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--bg);
+    background: #5eead4;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.fake-ad-modal-close:hover {
+    background: #2dd4bf;
+}
+
 /* Footer */
 footer {
     border-top: 1px solid var(--border);
