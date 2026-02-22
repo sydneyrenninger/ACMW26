@@ -275,6 +275,15 @@ input::placeholder {
     margin-bottom: 2rem;
 }
 
+.app{
+    background: #fff;
+    width:90%
+    max-width:600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
 /* Graphic placeholders */
 .graphic {
     margin: 1.5rem 0;
