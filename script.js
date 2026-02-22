@@ -3,7 +3,7 @@ const strengthBar = document.getElementById("strengthBar");
 const strengthText = document.getElementById("strengthText");
 const toggleBtn = document.getElementById("toggleBtn");
 
-password.addEventListener("input", () =>){
+password.addEventListener("input", () =>{
   let val = password.value;
   let strength = 0;
 
@@ -45,9 +45,9 @@ switch(strength){
       strengthText.innerText = "Very Strong";
       break;
 }
-};
+});
 
-toggleBtn.addEventListener("Click", () =>){
+toggleBtn.addEventListener("Click", () =>{
   if(password.type == "password"){
     password.type = "text";
     toggleBtn.textContent = "Hide";
@@ -56,5 +56,5 @@ toggleBtn.addEventListener("Click", () =>){
     password.type = "password";
     toggleBtn.textContent = "Show";
   }
-};
+});
                           
