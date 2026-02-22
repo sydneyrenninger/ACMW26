@@ -174,14 +174,17 @@ button:active {
 }
 
 .container {
-    width: 420px;
-    background: #fff;
-    padding: 20px 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 350;
+    background: rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter:blur(10px);
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    
 }
 
-.container header {
+/*.container header {
     font-size: 24px;
     font-weight: 600;
     line-height: 33px;
@@ -267,7 +270,7 @@ form .indicator span.medium:before {
 
 form .indicator span.strong:before {
     background-color: #23ad5c;
-}
+} */
 
 /* Article page (e.g. MFA) */
 .article-page {
