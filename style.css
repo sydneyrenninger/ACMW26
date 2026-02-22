@@ -476,6 +476,147 @@ form .text.strong {
     color: #23ad5c;
 }
 
+/* Phishing activity – interactive example email */
+.phishing-activity .phishing-example {
+    margin-bottom: 2rem;
+}
+
+.phishing-activity .phishing-example:last-child {
+    margin-bottom: 0;
+}
+
+.phishing-activity .email-example-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin: 1.5rem 0 0.5rem;
+}
+
+.phishing-activity .phishing-example:first-child .email-example-label {
+    margin-top: 0;
+}
+
+.phishing-activity .email-mockup {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin: 1.25rem 0;
+    max-width: 100%;
+}
+
+.phishing-activity .email-header {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.phishing-activity .email-meta {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.phishing-activity .email-meta:last-child {
+    margin-bottom: 0;
+}
+
+.phishing-activity .email-meta strong {
+    color: var(--text-muted);
+    margin-right: 0.35rem;
+}
+
+.phishing-activity .email-body {
+    padding: 1.25rem 1.25rem 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+}
+
+.phishing-activity .email-body p {
+    margin-bottom: 1rem;
+    color: inherit;
+}
+
+.phishing-activity .email-body p:last-child {
+    margin-bottom: 0;
+}
+
+.phishing-activity .phish-spot {
+    cursor: pointer;
+    border-bottom: 2px dotted var(--accent);
+    padding: 0 1px;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.phishing-activity .phish-spot:hover {
+    background: rgba(124, 108, 249, 0.15);
+    border-bottom-color: var(--accent-hover);
+}
+
+.phishing-activity .email-fake-btn {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    background: rgba(124, 108, 249, 0.25);
+    border: 1px solid rgba(124, 108, 249, 0.5);
+}
+
+.phishing-activity .email-fake-btn:hover {
+    background: rgba(124, 108, 249, 0.35);
+}
+
+.phishing-activity .phish-hint-dotted {
+    border-bottom: 1px dotted var(--accent);
+    padding: 0 2px;
+}
+
+.phishing-activity .hint-list {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    background: rgba(45, 212, 191, 0.06);
+    border: 1px solid rgba(45, 212, 191, 0.25);
+    border-radius: var(--radius);
+}
+
+.phishing-activity .phish-counter {
+    font-weight: 700;
+    color: #5eead4;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.phishing-activity .hint-list-label {
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.phishing-activity .hint-list ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.phishing-activity .hint-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.phishing-activity .hint-list li strong {
+    color: #5eead4;
+}
+
+.phishing-activity .hint-list-empty {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin: 0;
+}
+
 /* Footer */
 footer {
     border-top: 1px solid var(--border);
