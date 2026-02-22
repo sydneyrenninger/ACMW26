@@ -115,9 +115,9 @@ const questions = [
   {
     question: "Which is the real Amazon website?",
     answers:[
-      {text: "https://www.amazon-shopping.net", correct: false}
-       {text: "https://www.amaz0n.com", correct: false}
-       {text: "http://amazon-deals.co", correct: false}
+      {text: "https://www.amazon-shopping.net", correct: false},
+       {text: "https://www.amaz0n.com", correct: false},
+       {text: "http://amazon-deals.co", correct: false},
        {text: "https://www.amazon.com", correct: true}
     ]
   }, 
@@ -125,9 +125,9 @@ const questions = [
   {
     question: "Which website option is the most credible for health information?",
     answers:[
-      {text: "http://health-secrets-blog.com", correct: false}
-       {text: "https://www.cdc.gov", correct: true}
-       {text: "http://cdc-updates.net", correct: false}
+      {text: "http://health-secrets-blog.com", correct: false},
+       {text: "https://www.cdc.gov", correct: true},
+       {text: "http://cdc-updates.net", correct: false},
        {text: "https://cdc-notreal.org", correct: false}
     ]
   }, 
@@ -135,9 +135,9 @@ const questions = [
   {
     question: "Which website option is the most credible for space research?",
     answers:[
-      {text: "https://www.nasa.gov", correct: true}
-       {text: "http://nasa-space-news.com", correct: false}
-       {text: "https://www.nasa-official.net", correct: false}
+      {text: "https://www.nasa.gov", correct: true},
+       {text: "http://nasa-space-news.com", correct: false},
+       {text: "https://www.nasa-official.net", correct: false},
        {text: "http://nasaupdates.info", correct: false}
     ]
   }, 
@@ -145,9 +145,9 @@ const questions = [
    {
     question: "Which website option is the most credible for news?",
     answers:[
-      {text: "http://bbc-breaking-news.net", correct: false}
-       {text: "http://nasa-space-news.com", correct: true}
-       {text: "https://bbc-world-news.co", correct: false}
+      {text: "http://bbc-breaking-news.net", correct: false},
+       {text: "http://nasa-space-news.com", correct: true},
+       {text: "https://bbc-world-news.co", correct: false},
        {text: "http://bbcarchive.internet", correct: false}
     ]
   }, 
@@ -155,16 +155,16 @@ const questions = [
   {
     question: "Which website option is the most credible for online banking?",
     answers:[
-      {text: "http://chase-secure-login.net", correct: false}
-       {text: "https://www.chase.com", correct: true}
-       {text: "https://www.chasebank-login.co", correct: false}
+      {text: "http://chase-secure-login.net", correct: false},
+       {text: "https://www.chase.com", correct: true},
+       {text: "https://www.chasebank-login.co", correct: false},
        {text: "http://secure-chase-info.org", correct: false}
     ]
   }
 ];
 
 const questionElement = document.getElementById("question");
-const answerButton = document.getElementById("answer-buttons");
+const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
@@ -180,7 +180,7 @@ function startQuiz(){
 function showQuestion(){
   let currentQuestion=questions[currentQuestionIndex];
   let questionNo = currentQuestionIndex +1;
-  questionelement.innerHTML = questionNo + ". " + currentQuestion.question;
+  questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
