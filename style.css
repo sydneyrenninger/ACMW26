@@ -199,7 +199,7 @@ button:active {
     margin-bottom: 1.25rem;
 }
 
-h2 {
+.container h2 {
     color: #fff;
     margin-bottom: 15px;
 }
@@ -219,7 +219,7 @@ input {
     font-size: 15px;
 }
 
-input:placeholder {
+input::placeholder {
     color: #eee;
 }
 
@@ -238,7 +238,7 @@ input:placeholder {
     width: 100%;
     height: 8px;
     border-radius: 10px;
-    background: rbga(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
     margin-top: 10px;
     overflow: hidden;
 }
@@ -257,102 +257,18 @@ input:placeholder {
     font-weight: bold;
 }
 
-/*.container header {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 33px;
-}
-
-.container form {
-    margin: 20px 5px 10px 5px;
-}
-
-form .field {
-    height: 45px;
-    width: 100%;
-    display: flex;
-    position: relative;
-}
-
-form .field input {
-    height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
-    padding-left: 15px;
-    outline: none;
-    border-radius: 5px;
-    font-size: 17px;
-    transition: all 0.3s;
-}
-
-form .field input:focus {
-    border-color: #27a360;
-    box-shadow: inset 0 0 3px #2fd072;
-}
-
-form .field .showBtn {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 600px;
-}
-
-form .indicator {
-    height: 10px;
-    width: 1;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 0;
-
-}
-
-form .indicator span {
-    width: 100%;
-    height: 100%;
-    background: lightgrey;
-    border-radius: 5px;
-    position: relative;
-}
-
-form .indicator span.medium {
-    margin: 0 3px;
-}
-
-
-form .indicator span:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: red;
-    border-radius: 5px;
-}
-
-form .indicator span.weak:before {
-    background-color: #ff4757;
-}
-
-form .indicator span.medium:before {
-    background-color: orange;
-}
-
-form .indicator span.strong:before {
-    background-color: #23ad5c;
-} */
-
 /* Article page (e.g. MFA) */
 .article-page {
     max-width: 780px;
 }
 
+.article-page .lead,
+.mfa-kid .lead {
+    color: var(--text-muted);
+}
+
 .article-page .lead {
     font-size: 1.2rem;
-    color: var(--text-muted);
     margin-bottom: 2rem;
 }
 
@@ -380,15 +296,13 @@ form .indicator span.strong:before {
     font-size: 1rem;
 }
 
-.graphic-inline .graphic-placeholder {
-    min-height: 100px;
+.graphic-inline .graphic-placeholder,
+.graphic-wide .graphic-placeholder {
     margin-top: 1rem;
 }
 
-.graphic-wide .graphic-placeholder {
-    min-height: 160px;
-    margin-top: 1rem;
-}
+.graphic-inline .graphic-placeholder { min-height: 100px; }
+.graphic-wide .graphic-placeholder { min-height: 160px; }
 
 .graphic img {
     width: 100%;
@@ -426,10 +340,6 @@ form .indicator span.strong:before {
     border-color: rgba(251, 191, 36, 0.3);
 }
 
-.section-accent h2 {
-    color: var(--text);
-}
-
 .section-purple h2 {
     color: #a78bfa;
 }
@@ -454,6 +364,101 @@ form .indicator span.strong:before {
 
 .section-callout p {
     color: var(--text);
+}
+
+/* MFA kid-friendly page – wider, more visual space, easier to read */
+.mfa-kid {
+    max-width: 1100px;
+}
+
+.mfa-kid .lead {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+}
+
+.mfa-kid .mfa-section {
+    padding: 2rem 2.25rem;
+    margin-bottom: 2rem;
+}
+
+.mfa-kid .mfa-factors {
+    margin-bottom: 2.5rem;
+}
+
+.mfa-kid .mfa-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.mfa-kid .mfa-section p + .mfa-list {
+    margin-top: 1rem;
+}
+
+.mfa-kid .mfa-list {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin: 0;
+}
+
+.mfa-kid .mfa-list li {
+    margin-bottom: 0.5rem;
+}
+
+.mfa-kid .mfa-factors h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+.mfa-kid .factor-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.mfa-kid .factor-card {
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.mfa-kid .factor-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.mfa-kid .factor-card.factor-know { border-color: rgba(167, 139, 250, 0.4); }
+.mfa-kid .factor-card.factor-have { border-color: rgba(45, 212, 191, 0.4); }
+.mfa-kid .factor-card.factor-are { border-color: rgba(251, 191, 36, 0.4); }
+
+.mfa-kid .factor-emoji {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.mfa-kid .factor-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+.mfa-kid .factor-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .mfa-kid .factor-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Password strength text (form) */
