@@ -166,15 +166,6 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Start quiz
-function startQuiz() {
-  currentQuestionIndex = 0;
-  score = 0;
-  nextButton.innerHTML = "Next";
-  showQuestion();
-}
-
-// Show a question
 function showQuestion() {
   resetState();
   const currentQuestion = questions[currentQuestionIndex];
@@ -190,6 +181,16 @@ function showQuestion() {
     button.addEventListener("click", selectAnswer);
   });
 }
+// Start quiz
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  nextButton.innerHTML = "Next";
+  showQuestion();
+}
+
+// Show a question
+
 
 // Reset answer buttons
 function resetState() {
