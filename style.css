@@ -177,8 +177,8 @@ section p {
 }
 
 .btn {
-    background: #fff;
-    color: #222;
+    background: #555555;
+    color: #ffffff;
     font-weight: 500;
     width: 100%;
     border: 1px solid #222;
@@ -347,7 +347,7 @@ input::placeholder {
 }
 
 .app {
-    background: #fff;
+    background: #2e2e2e;
     width: 90%;
     max-width: 600px;
     /*margin: 100px auto 0; */
