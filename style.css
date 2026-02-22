@@ -207,6 +207,14 @@ section p {
     color: #fff;
     
 }
+
+.correct{
+    background: #9aeabc;
+}
+
+.incorrect{
+    background: #ff9393;
+}
 /* Buttons */
 button {
     font-family: var(--font-sans);
