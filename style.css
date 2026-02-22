@@ -148,7 +148,7 @@ section p {
     color: var(--text-muted);
     font-size: 0.95rem;
 }
-/* Webiste */
+/* Website */
 .app{
     background:#fff;
     width:90%;
@@ -187,6 +187,19 @@ section p {
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s;
+}
+
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border:0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor:pointer;
+    display: none;
 }
 
 .btn:hover{
