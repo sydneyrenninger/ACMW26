@@ -11,12 +11,13 @@ password.addEventListener("input", () =>{
   if(val.match(/[A-Z]/))strength++;
   if(val.match(/[0-9]/))strength++;
   if(val.match(/[$@#&!]/))strength++;
-  if(val.match(/[val.length >= 12]/))strength++;
+  if(val.length >= 12)strength++;
 
-  if(val == ""){
+  if(val === ""){
     strengthBar.style.width = "0%";
     strengthBar.style.background = "transparent";
     strengthBar.innerText = "Start typing...";
+    return;
   }
 switch(strength){
   case 1: 
@@ -47,8 +48,8 @@ switch(strength){
 }
 });
 
-toggleBtn.addEventListener("Click", () =>{
-  if(password.type == "password"){
+toggleBtn.addEventListener("click", () =>{
+  if(password.type === "password"){
     password.type = "text";
     toggleBtn.textContent = "Hide";
   }
