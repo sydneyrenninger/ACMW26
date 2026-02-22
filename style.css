@@ -181,8 +181,28 @@ button:active {
     backdrop-filter:blur(10px);
     text-align:center;
     box-shadow:0 10px 25px rgba(0,0,0,0.2);
-    
 }
+
+h2{
+    color:#fff;
+    margin-bottom: 15px;
+}
+
+.input-field{
+    position:relative;
+}
+input{
+    width:100%;
+    padding:12px 40px 12px 12px;
+    border-radius:8px;
+    outline:none;
+    border:1px solid rgba(255,255,255,0.4);
+    background:rgba(255,255,255,0.2);
+    color:#fff;
+    font-size: 15px;
+}
+
+
 
 /*.container header {
     font-size: 24px;
