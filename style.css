@@ -543,6 +543,13 @@ form .text.strong {
 
 .phishing-activity .phish-spot {
     cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.phishing-activity .phish-spot--found {
+    background-color: rgba(94, 234, 212, 0.25);
+    box-shadow: 0 0 0 2px rgba(94, 234, 212, 0.5);
 }
 
 .phishing-activity .email-fake-btn {

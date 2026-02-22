@@ -97,7 +97,10 @@ if (password && strengthBar && strengthText && toggleBtn) {
       el.addEventListener("click", function () {
         var issue = this.getAttribute("data-issue");
         var explanation = this.getAttribute("data-explanation");
-        if (issue && explanation) addHint(issue, explanation);
+        if (issue && explanation) {
+          addHint(issue, explanation);
+          this.classList.add("phish-spot--found");
+        }
       });
     });
 
