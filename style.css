@@ -175,69 +175,72 @@ button:active {
 
 .container {
     width: 350;
-    background: rgba(255,255,255,0.15);
+    background: rgba(255, 255, 255, 0.15);
     padding: 25px;
     border-radius: 15px;
-    backdrop-filter:blur(10px);
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-h2{
-    color:#fff;
+h2 {
+    color: #fff;
     margin-bottom: 15px;
 }
 
-.input-field{
-    position:relative;
+.input-field {
+    position: relative;
 }
-input{
-    width:100%;
-    padding:12px 40px 12px 12px;
-    border-radius:8px;
-    outline:none;
-    border:1px solid rgba(255,255,255,0.4);
-    background:rgba(255,255,255,0.2);
-    color:#fff;
+
+input {
+    width: 100%;
+    padding: 12px 40px 12px 12px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
     font-size: 15px;
 }
 
-input:placeholder{
-    color:#eee;
+input:placeholder {
+    color: #eee;
 }
 
-.toggle-btn{
+.toggle-btn {
     position: absolute;
     right: 10px;
-    top:50%;
+    top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    font-size:14px;
+    font-size: 14px;
     color: #fff;
-    user-select:none;
+    user-select: none;
 }
 
-.strength-meter{
-    width:100%;
-    height:8px;
-    border-radius:10px;
-    background: rbga(255,255,255,0.3);
+.strength-meter {
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    background: rbga(255, 255, 255, 0.3);
     margin-top: 10px;
     overflow: hidden;
 }
 
-.strength-bar{
-    height:100%;
-    width:0%
-    border-radius:10px;
+.strength-bar {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
     transition: 0.4s;
 }
-#strengthText{
-    margin-top:10px;
-    font-size:14px;
+
+#strengthText {
+    margin-top: 10px;
+    font-size: 14px;
     color: #fff;
-    font-weight:bold;
+    font-weight: bold;
 }
+
 /*.container header {
     font-size: 24px;
     font-weight: 600;
