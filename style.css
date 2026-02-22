@@ -202,10 +202,13 @@ section p {
     display: none;
 }
 
-.btn:hover{
+.btn:hover:not([disabled]){
     background: #222;
     color: #fff;
-    
+}
+
+.btn:disabled{
+    cursor: no-drop;
 }
 
 .correct{
