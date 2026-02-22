@@ -113,51 +113,52 @@ if (password && strengthBar && strengthText && toggleBtn) {
 const questions = [
   {
     question: "Which is the real Amazon website?",
-    answers:[
-      {text: "https://www.amazon-shopping.net", correct: false},
-      {text: "https://www.amaz0n.com", correct: false},
-      {text: "http://amazon-deals.co", correct: false},
-      {text: "https://www.amazon.com", correct: true}
+    answers: [
+      { text: "https://www.amazon-shopping.net", correct: false },
+      { text: "https://www.amaz0n.com", correct: false },
+      { text: "http://amazon-deals.co", correct: false },
+      { text: "https://www.amazon.com", correct: true }
     ]
-  }, 
+  },
   {
     question: "Which website option is the most credible for health information?",
-    answers:[
-      {text: "http://health-secrets-blog.com", correct: false},
-      {text: "https://www.cdc.gov", correct: true},
-      {text: "http://cdc-updates.net", correct: false},
-      {text: "https://cdc-notreal.org", correct: false}
+    answers: [
+      { text: "http://health-secrets-blog.com", correct: false },
+      { text: "https://www.cdc.gov", correct: true },
+      { text: "http://cdc-updates.net", correct: false },
+      { text: "https://cdc-notreal.org", correct: false }
     ]
-  }, 
+  },
   {
     question: "Which website option is the most credible for space research?",
-    answers:[
-      {text: "https://www.nasa.gov", correct: true},
-      {text: "http://nasa-space-news.com", correct: false},
-      {text: "https://www.nasa-official.net", correct: false},
-      {text: "http://nasaupdates.info", correct: false}
+    answers: [
+      { text: "https://www.nasa.gov", correct: true },
+      { text: "http://nasa-space-news.com", correct: false },
+      { text: "https://www.nasa-official.net", correct: false },
+      { text: "http://nasaupdates.info", correct: false }
     ]
-  }, 
+  },
   {
     question: "Which website option is the most credible for news?",
-    answers:[
-      {text: "http://bbc-breaking-news.net", correct: false},
-      {text: "https://www.bbc.com", correct: true},
-      {text: "https://bbc-world-news.co", correct: false},
-      {text: "http://bbcarchive.internet", correct: false}
+    answers: [
+      { text: "http://bbc-breaking-news.net", correct: false },
+      { text: "https://www.bbc.com", correct: true },
+      { text: "https://bbc-world-news.co", correct: false },
+      { text: "http://bbcarchive.internet", correct: false }
     ]
-  }, 
+  },
   {
     question: "Which website option is the most credible for online banking?",
-    answers:[
-      {text: "http://chase-secure-login.net", correct: false},
-      {text: "https://www.chase.com", correct: true},
-      {text: "https://www.chasebank-login.co", correct: false},
-      {text: "http://secure-chase-info.org", correct: false}
+    answers: [
+      { text: "http://chase-secure-login.net", correct: false },
+      { text: "https://www.chase.com", correct: true },
+      { text: "https://www.chasebank-login.co", correct: false },
+      { text: "http://secure-chase-info.org", correct: false }
     ]
   }
 ];
 
+// Grab elements
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
@@ -165,83 +166,84 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz(){
+// Start quiz
+function startQuiz() {
   currentQuestionIndex = 0;
   score = 0;
   nextButton.innerHTML = "Next";
   showQuestion();
 }
 
-function showQuestion(){
+// Show a question
+function showQuestion() {
   resetState();
-  let currentQuestion = questions[currentQuestionIndex];
-  let questionNo = currentQuestionIndex + 1;
-  questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+  const currentQuestion = questions[currentQuestionIndex];
+  questionElement.innerText = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
 
   currentQuestion.answers.forEach(answer => {
     const button = document.createElement("button");
-    button.innerHTML = answer.text;
+    button.innerText = answer.text;
     button.classList.add("btn");
     answerButtons.appendChild(button);
-
-    if(answer.correct){
-      button.dataset.correct = "true";
-    }
+    if (answer.correct) button.dataset.correct = "true";
 
     button.addEventListener("click", selectAnswer);
   });
 }
 
-function resetState(){
+// Reset answer buttons
+function resetState() {
   nextButton.style.display = "none";
-  while(answerButtons.firstChild){
+  while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
 }
 
-function selectAnswer(e){
+// Handle answer selection
+function selectAnswer(e) {
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
 
-  if(isCorrect){
+  if (isCorrect) {
     selectedBtn.classList.add("correct");
     score++;
-  } else{
+  } else {
     selectedBtn.classList.add("incorrect");
   }
 
-  Array.from(answerButtons.children).forEach(button =>{
-    if(button.dataset.correct === "true"){
-      button.classList.add("correct");
-    }
+  Array.from(answerButtons.children).forEach(button => {
+    if (button.dataset.correct === "true") button.classList.add("correct");
     button.disabled = true;
   });
 
   nextButton.style.display = "block";
 }
 
-function showScore(){
+// Show score at end
+function showScore() {
   resetState();
-  questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-  nextButton.innerHTML = "Play Again";
+  questionElement.innerText = `You scored ${score} out of ${questions.length}!`;
+  nextButton.innerText = "Play Again";
   nextButton.style.display = "block";
 }
 
-function handleNextButton(){
+// Handle next button
+function handleNextButton() {
   currentQuestionIndex++;
-  if(currentQuestionIndex < questions.length){
+  if (currentQuestionIndex < questions.length) {
     showQuestion();
-  } else{
-    showScore(); 
+  } else {
+    showScore();
   }
 }
 
-nextButton.addEventListener("click", () =>{
-  if(currentQuestionIndex < questions.length){
+nextButton.addEventListener("click", () => {
+  if (currentQuestionIndex < questions.length) {
     handleNextButton();
-  } else{
+  } else {
     startQuiz();
   }
 });
 
+// Start quiz on page load
 startQuiz();
