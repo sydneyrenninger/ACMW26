@@ -1009,6 +1009,10 @@ footer p {
     color: var(--text-muted);
 }
 
+a:link{
+    color:#ffffff;
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
