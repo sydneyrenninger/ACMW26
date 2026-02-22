@@ -42,7 +42,7 @@ switch(strength){
       break;
   case 5: 
       strengthBar.style.width = "100%";
-      strengthBar.style.background ="#32ecc71";
+      strengthBar.style.background ="#2ecc71";
       strengthText.innerText = "Very Strong";
       break;
 }
