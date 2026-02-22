@@ -232,9 +232,11 @@ input:placeholder{
     border-radius:10px;
     transition: 0.4s;
 }
-
-.strengthText{
+#strengthText{
     margin-top:10px;
+    font-size:14px;
+    color: #fff;
+    font-weight:bold;
 }
 /*.container header {
     font-size: 24px;
